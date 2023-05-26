@@ -1,0 +1,49 @@
+.page-header {
+    padding: 24px 0;
+}
+
+.page-header__title {
+    height: 40px;
+    margin: 0;
+    font-size: 28px;
+    line-height: 143%;
+    letter-spacing: -0.6px;
+    color: $text-color;
+    font-weight: 900;
+}
+
+.page-nav {
+    margin: 5px;
+    display: flex;
+    overflow: auto;
+    padding-bottom: 0;
+}
+
+@media (min-width: 1119px) {
+    .page-nav {
+        flex-wrap: wrap
+    }
+
+    .page-nav__link {
+        padding: 8px;
+        height: 24px;
+    }
+}
+
+.page-nav__link {
+    padding: 8px;
+    height: 24px;
+    margin-right: 16px;
+    white-space: nowrap;
+    color: $unactive-text-color;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.page-nav__link-state--active {
+    border: 2px solid $link-border-color;
+    border-radius: 6px;
+    order: -1;
+    background-color: $header-bg-color;
+    padding: 6px;
+}

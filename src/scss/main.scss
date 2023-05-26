@@ -1,0 +1,96 @@
+@import 'page-header',
+'menu',
+'popup',
+'post',
+'section',
+'services',
+'repair',
+'prices',
+'swiper';
+main {
+    background: $bg-color;
+    font-weight: normal;
+    color: $text-color;
+    padding: 0 $padding;
+}
+
+button,
+th,
+tr,
+ul,
+li,
+input {
+    font-family: $font;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    color: $text-color;
+}
+
+.button {
+    height: 24px;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.button::before {
+    content: url('../img/button.svg');
+    margin-right: 8px;
+}
+
+.title-divider {
+    position: relative;
+}
+
+.title-divider::before {
+    content: "";
+    height: 40px;
+    width: 4px;
+    border-radius: 2px;
+    background: $title-left-border-color;
+    position: absolute;
+    left: calc(#{$padding} * (-1));
+}
+
+.white-space {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $popup-bg-color;
+    mix-blend-mode: normal;
+    opacity: 0.96;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.popup-button {
+    text-transform: uppercase;
+    color: $other-text-color;
+    letter-spacing: -0.15px;
+    font-size: 12px;
+    line-height: 24px;
+    background: $button-bg-color;
+    border-radius: 16px;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.popup-button::after {
+    content: ">";
+    margin-left: 12px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+@media (min-width: 1440px) {
+    .body__wrapper {
+        width: calc(100% - 320px);
+        position: absolute;
+        right: 0;
+    }
+}

@@ -1,0 +1,116 @@
+$table-radius: 6px;
+
+.prices {
+    padding-bottom: 47px;
+}
+
+.prices__table {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.prices__table tr {
+    width: 100%;
+    background: $header-bg-color;
+}
+
+.prices__table tr:first-child {
+    color: $footer-text-color;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    background: transparent;
+}
+
+.prices__table th,
+.prices__table td {
+    padding: 16px;
+    text-align: start;
+}
+
+.prices__table td {
+    border-bottom: 1px solid $item-border-color;
+}
+
+.prices__table tr:nth-child(2) td:first-child {
+    border-top-left-radius: $table-radius;
+}
+
+.prices__table tr:nth-child(2) td:last-child {
+    border-top-right-radius: $table-radius;
+}
+
+.prices__table tr:nth-child(6) td:first-child {
+    border-bottom-left-radius: $table-radius;
+}
+
+.prices__table tr:nth-child(6) td:last-child {
+    border-bottom-right-radius: $table-radius;
+}
+
+.prices__button {
+    padding: 0 12px;
+}
+
+.prices__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    height: 200px;
+    width: 260px;
+    padding: 16px;
+    gap: 16px;
+}
+
+.swiper-prices__label {
+    font-size: 14px;
+    line-height: 18px;
+    color: $text-color;
+    letter-spacing: 0.2px;
+}
+
+.swiper-prices__label--property {
+    color: $unactive-text-color;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+}
+
+.swiper-prices__group {
+    gap: 4px;
+}
+
+.swiper-prices__button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.prices__warning {
+	width: 50%;
+	padding-top: 24px;
+	padding-bottom: 16px;
+}
+
+@media (max-width: 320px) {
+    .prices__warning {
+        width: 100%;
+    }
+}
+
+.prices__offer-button {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+    text-align: left;
+}
+
+.prices__offer-button::after {
+	content: ">";
+	color: $button-bg-color;
+}

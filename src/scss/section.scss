@@ -1,0 +1,46 @@
+.reverse-button::before {
+    content: url('../img/button.svg');
+    display: inline-block;
+    margin-right: 8px;
+    transform: rotate(180deg);
+}
+
+.title {
+    font-weight: normal;
+    color: $unactive-text-color;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, $bg-color 1.39%, $contrast-bg-color 100%);
+    padding: 16px 24px;
+    margin: 0;
+    position: relative;
+    left: -24px;
+    width: 100%;
+}
+
+.galery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+.main-section {
+    padding-bottom: 32px;
+}
+
+.item {
+    background-color: $contrast-bg-color;
+    border: 1px solid $item-border-color;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 224px;
+}
+
+@media (min-width: 1119px) {
+    .item {
+        width: 240px;
+    }
+}

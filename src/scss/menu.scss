@@ -1,0 +1,135 @@
+.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    font-family: $font;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    height: 100%;
+    max-height: 1024px;
+    padding: 24px;
+    box-shadow: 16px 0px 52px 0px #0e185033, -2px 0px 4px 0px #454f7e05;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+@media (min-width: 360px) {
+    .menu {
+        width: 320px;
+    }
+}
+
+@media (min-width: 521px) {
+    .menu {
+        width: 440px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .m-header__close-b {
+        display: none;
+    }
+    .menu {
+        box-shadow: none;
+        width: 320px;
+    }
+}
+
+.m-header {
+    display: flex;
+    padding-bottom: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.m-header__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.m-main {
+    flex: 1 0 50%;
+}
+
+.m-main__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style-type: none;
+}
+
+.m-main__item {
+    font-family: $font;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-weight: bold;
+}
+
+.m-main__item--active {
+    position: relative;
+    color: $unactive-text-color;
+}
+
+.m-main__item--active::before {
+    content: '';
+    height: 32px;
+    width: 4px;
+    border-radius: 2px;
+    background: $title-left-border-color;
+    position: absolute;
+    left: -25px;
+    top: -5px;
+}
+
+.m-footer {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 40px;
+    min-height: 200px;
+}
+
+.m-footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.f-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.contacts__email {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.contacts__phone {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $text-color;
+}
+
+.lang {
+    display: flex;
+    gap: 8px;
+}
+
+.lang__input {
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.lang__item:has(.lang__input:checked) {
+    color: $unactive-text-color;
+}

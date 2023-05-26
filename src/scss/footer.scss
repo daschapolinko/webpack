@@ -1,0 +1,38 @@
+.footer {
+    color: $footer-text-color;
+    background: $bg-color;
+    padding: $padding;
+    font-size: 14px;
+    line-height: 16px;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer div {
+	width: 33%;
+}
+
+.footer__date {
+	text-align: left;
+}
+
+.footer__policy {
+	text-align: center;
+}
+.footer__warning {
+	text-align: right;
+}
+
+@media (max-width: 320px) {
+    .footer {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer div {
+        width: 100%;
+        text-align: center;
+    }
+}

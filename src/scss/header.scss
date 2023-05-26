@@ -1,0 +1,95 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding;
+}
+
+.header__menu {
+    display: flex;
+    position: relative;
+    min-width: 155px;
+    justify-content: space-between;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1119px) {
+    .header__menu {
+        display: none;
+    }
+    .header {
+        position: absolute;
+        top: -6px;
+        right: 0;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1119px) {
+    .header__menu {
+        min-width: 180px;
+    }
+    .header__burger::after {
+        content: "";
+        width: 4px;
+        height: 32px;
+        border-radius: 2px;
+        background: $divider-color;
+        position: absolute;
+        left: 60px;
+        bottom: 10px;
+    }
+}
+
+.large-menu {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+    .large-menu {
+        display: flex;
+        gap: 16px;
+        height: 40px;
+        min-width: 170px;
+    }
+}
+
+.h-buttons {
+    display: flex;
+    min-width: 90px;
+    height: 40px;
+    gap: 16px;
+    position: relative;
+}
+
+.h-buttons::before {
+    content: "";
+    width: 4px;
+    height: 32px;
+    border-radius: 2px;
+    background: $divider-color;
+    position: relative;
+    top: 4px;
+}
+
+.h-buttons__label {
+    display: none;
+}
+
+@media (min-width: 1119px) {
+    .h-buttons::before {
+        display: none;
+    }
+    .h-buttons__button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .h-buttons__label {
+        display: inline;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

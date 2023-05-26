@@ -1,0 +1,17 @@
+.repair__item {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 160px;
+    padding: 16px;
+}
+
+.repair__label {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
