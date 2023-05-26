@@ -1,1 +1,1 @@
-Посмотреть сайт можно по ссылке: https://daschapolinko.github.io/DashaPolinkoWeb/
+Посмотреть сайт можно по ссылке: https://daschapolinko.github.io/webpack/
