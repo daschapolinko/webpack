@@ -1,6 +1,9 @@
 {
   "name": "web-last-block",
   "version": "1.0.0",
+  "repository": {
+    "url": "git+https://github.com/daschapolinko/webpack.git"
+  },
   "description": "",
   "keywords": [
     "web",
@@ -10,7 +13,7 @@
     "webpack"
   ],
   "license": "ISC",
-  "author": "Kata Academy",
+  "author": "Daria Polinko",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
