@@ -3,7 +3,7 @@ export function createMenu() {
     let white = document.querySelector('.white-space');
     let menu = document.querySelector('.menu')
 
-    const breakpointMenu = window.matchMedia('(min-width: 1439px)');
+    const breakpointMenu = window.matchMedia('(min-width: 1366px)');
 
     let close_button = menu.querySelector('.close-button');
     var menu_button = document.querySelector('.menu-button');

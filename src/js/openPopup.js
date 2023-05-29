@@ -1,7 +1,7 @@
 export function openPopup(src) {
 
     let white = document.querySelector('.white-space');
-    
+
     let menu = document.querySelector('.menu')
     if (!menu.classList.contains('hidden-element')) {
         menu.classList.add('hidden-element');
@@ -20,8 +20,11 @@ export function openPopup(src) {
         }
     })
 
-    function closePopup() {    
-        white.classList.add('hidden-element');
+    function closePopup() {
         src.classList.add('hidden-element');
+        if (window.screen.width >= 1366) {
+            menu.classList.remove('hidden-element');
+        }
+        white.classList.add('hidden-element');
     }
 }

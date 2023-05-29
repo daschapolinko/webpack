@@ -87,7 +87,7 @@ input {
     line-height: 32px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop) {
     .body__wrapper {
         width: calc(100% - 320px);
         position: absolute;

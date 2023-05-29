@@ -7,7 +7,7 @@ export function createPrice(src, data) {
     let table = src.querySelector('table');
 
     let galerySwiper = src.querySelector('.swiper-wrapper');
-    const swiper = src.querySelector('.swiper');
+    const swiper = src.querySelector('.prices__swiper');
     let keys = Object.keys(data[0]);
 
     const breakpointSwiper = window.matchMedia('(max-width: 767px)');
@@ -86,15 +86,14 @@ export function createPrice(src, data) {
                     addSlide(data[i]);
                 };
             }
-            table.classList.add('hidden-element')
+            table.classList.add('hidden-element');
             swiper.classList.remove('hidden-element');
             while (table.children.length > 0) {
                 table.children[0].remove();
             }
-            sliders = new Swiper('.swiper', {
+            sliders = new Swiper('.prices__swiper', {
                 direction: 'horizontal',
-                spaceBetween: 240,
-                slidesPerView: 2,
+                slidesPerView: 'auto',
                 initialSlide: 0,
                 watchOverflow: true,
                 pagination: {

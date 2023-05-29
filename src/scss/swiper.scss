@@ -7,3 +7,13 @@
 .swiper-pagination {
     position: static !important;
 }
+
+.services .swiper-slide,  .repair .swiper-slide {
+    width: 224px;
+    margin-right: 4%;
+}
+
+.prices .swiper-slide {
+    width: 260px;
+    margin-right: 4%;
+}

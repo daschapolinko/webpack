@@ -16,19 +16,19 @@
     z-index: 2;
 }
 
-@media (min-width: 360px) {
+@media (max-width: $mobile) {
     .menu {
         width: 320px;
     }
 }
 
-@media (min-width: 521px) {
+@media (min-width: $tablet) {
     .menu {
         width: 440px;
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop) {
     .m-header__close-b {
         display: none;
     }

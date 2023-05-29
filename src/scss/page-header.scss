@@ -19,7 +19,7 @@
     padding-bottom: 0;
 }
 
-@media (min-width: 1119px) {
+@media (min-width: $desktop) {
     .page-nav {
         flex-wrap: wrap
     }

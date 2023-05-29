@@ -16,7 +16,7 @@ export function createBrands(src, template, data) {
 
     var service_btn = src.querySelector('.button')
 
-    const breakpointSwiper = window.matchMedia('(max-width: 767px)');
+    const breakpointSwiper = window.matchMedia('(max-width: 768px)');
     let sliders, galeryWidth, servicesCount
 
     function findGaleryWidth() {
@@ -25,7 +25,11 @@ export function createBrands(src, template, data) {
         } else {
             galeryWidth = galeryItem.offsetWidth;
         }
-        servicesCount = Math.floor(galeryWidth / 234) * 2;
+        if (window.screen.width >= 1366) {
+            servicesCount = Math.floor(galeryWidth / 253) * 2;
+        } else {
+                servicesCount = Math.floor(galeryWidth / 237) * 2;
+        }
         makeGalery();
     }
 
@@ -69,8 +73,8 @@ export function createBrands(src, template, data) {
             }
             sliders = new Swiper('.swiper', {
                 direction: 'horizontal',
-                spaceBetween: 240,
-                slidesPerView: 2,
+                slidesPerView: 'auto',
+                spaceBetween: 60,
                 initialSlide: 0,
                 watchOverflow: true,
                 pagination: {
@@ -111,7 +115,7 @@ export function createBrands(src, template, data) {
 
     window.addEventListener('resize', findGaleryWidth)
 
-    service_btn.addEventListener('click', function(evt) {
+    service_btn.addEventListener('click', function (evt) {
         if (service_btn.textContent == 'Показать все') {
             for (var i = servicesCount; i < data.length; i++) {
                 addService(data[i]);

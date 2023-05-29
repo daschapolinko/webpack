@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-@media (min-width: 1119px) {
+@media (min-width: $desktop) {
     .header__menu {
         display: none;
     }
@@ -27,7 +27,11 @@
     }
 }
 
-@media (min-width: 767px) and (max-width: 1119px) {
+.large-menu {
+    display: none;
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
     .header__menu {
         min-width: 180px;
     }
@@ -41,13 +45,6 @@
         left: 60px;
         bottom: 10px;
     }
-}
-
-.large-menu {
-    display: none;
-}
-
-@media (min-width: 768px) and (max-width: 1119px) {
     .large-menu {
         display: flex;
         gap: 16px;
@@ -78,7 +75,7 @@
     display: none;
 }
 
-@media (min-width: 1119px) {
+@media (min-width: $desktop) {
     .h-buttons::before {
         display: none;
     }

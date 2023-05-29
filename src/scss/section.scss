@@ -39,7 +39,7 @@
     width: 224px;
 }
 
-@media (min-width: 1119px) {
+@media (min-width: $desktop) {
     .item {
         width: 240px;
     }

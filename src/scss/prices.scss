@@ -96,7 +96,7 @@ $table-radius: 6px;
 	padding-bottom: 16px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: $mobile) {
     .prices__warning {
         width: 100%;
     }
